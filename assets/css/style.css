@@ -1,9 +1,11 @@
 :root {
     --primary-color: #151D3B;
     --secondary-color: #D82148;
-    --tertiary-color: #6EBF8B;
+    --tertiary-color: #357a4d;
     --quaternary-color: #dadbbd;
     --heading-fonts: 50px;
+    --content-section-border: 5px solid var(--primary-color);
+    --heading-border: 3px solid var(--tertiary-color);
 }
 
 * {
@@ -73,6 +75,7 @@ header nav ul li a {
     height: 450px;
     margin: 0;
     padding: 10px;
+    border-bottom: var(--content-section-border);
 }
 
 .hero {
@@ -122,8 +125,9 @@ header nav ul li a {
 }
 
 .about-me h2{
-    border-bottom: 1px solid var(--primary-color);
-    width: 75%;
+    border-bottom: var(--heading-border);
+    padding: 40px;
+    width: 60%;
     font-size: 40px;
     height: 20%;
     display: flex;
@@ -158,8 +162,9 @@ header nav ul li a {
 }
 
 .resume h2{
-    border-bottom: 1px solid var(--primary-color);
-    width: 75%;
+    border-bottom: var(--heading-border);
+    width: 60%;
+    padding: 40px;
     font-size: 40px;
     height: 20%;
     display: flex;
@@ -192,6 +197,7 @@ header nav ul li a {
 }
 
 .projects {
+    border-bottom: var(--content-section-border);
     background-color: var(--quaternary-color);
     color: var(--primary-color);
     display: flex;
@@ -201,8 +207,9 @@ header nav ul li a {
 }
 
 .projects h2 {
-    border-bottom: 1px solid var(--primary-color);
-    width: 75%;
+    border-bottom: var(--heading-border);
+    padding: 30px;
+    width: 60%;
     font-size: 40px;
     height: 20%;
     display: flex;
@@ -221,19 +228,19 @@ header nav ul li a {
 }
 
 .main-card {
-    
+    margin: 12.5px;
+    border: 10px solid var(--tertiary-color);
     max-width: 100%;
     height: 60%;
     display: flex;
 }
 
 .main-card img {
-    padding: 12.5px;
     width: 100%
 }
 
 .small-card-container {
-    margin: 10px;
+    margin: 5px;
     width: 100%;
     height: 40%;
     display: flex;
@@ -241,15 +248,17 @@ header nav ul li a {
     justify-content: center;
 }
 
+.small-card-container div {
+    width: 47.5%;
+    border: 10px solid var(--tertiary-color);
+    margin: 12px;
+}
 .small-card-container img {
-    padding: 5px;
-    width: 50%;
-    /* display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; */
+    width: 100%;
 }
 
 .contact-me {
+    border-bottom: var(--content-section-border);
     width: 100%;
     height: 350px;
     margin: 0;
@@ -263,8 +272,9 @@ header nav ul li a {
 }
 
 .contact-me h2 {
-    border-bottom: 1px solid var(--primary-color);
-    width: 75%;
+    border-bottom: var(--heading-border);
+    width: 60%;
+    padding: 40px;
     font-size: 40px;
     height: 20%;
     display: flex;
