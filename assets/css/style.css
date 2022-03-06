@@ -169,6 +169,7 @@ header nav ul li a:hover {
     font-size: 25px;
     margin-top: 5px;
     margin-bottom: 5px;
+    padding: 5px;
 }
 
 .resume {
@@ -250,8 +251,8 @@ header nav ul li a:hover {
 .main-card {
     margin: 12.5px;
     border: 10px solid var(--tertiary-color);
-    max-width: 100%;
-    height: 60%;
+    max-width: 75%;
+    max-height: 40%;
     display: flex;
 }
 
@@ -260,21 +261,23 @@ header nav ul li a:hover {
 }
 
 .small-card-container {
-    margin: 5px;
-    width: 100%;
-    height: 40%;
+    /* margin: 10px; */
+    max-width: 75%;
+    max-height: 60%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:flex-start;
 }
 
 .small-card-container div {
-    width: 47.5%;
+    max-width: 50%;
+    height: auto; 
     border: 10px solid var(--tertiary-color);
-    margin: 12px;
+    
 }
 .small-card-container img {
     width: 100%;
+    height: 100%;
 }
 
 .contact-me {
