@@ -300,12 +300,12 @@ header nav ul li a {
     text-align: center;
 }
 
-a {
+.contact-me a {
     text-decoration: none;
     color: var(--primary-color);
 }
 
-a:visited {
+.contact-me a:visited {
     text-decoration: none;
     color: var(--primary-color);
 }
