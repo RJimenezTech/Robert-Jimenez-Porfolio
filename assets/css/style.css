@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid red; */
 }
 
 body {
@@ -54,23 +55,24 @@ header nav ul {
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
+    
 }
 
 header nav ul li a {
     font-weight:bold;
     font-size: 3vw;
+    color: var(--secondary-color);
 }
 
 /* #content {
      
 }*/
 
-.hero, .about-me, .resume, .contact-me {
+.hero, .about-me, .resume {
     width: 100%;
     height: 450px;
     margin: 0;
     padding: 10px;
-    border: 2px solid var(--primary-color);
 }
 
 .hero {
@@ -192,24 +194,24 @@ header nav ul li a {
 .projects {
     background-color: var(--quaternary-color);
     color: var(--primary-color);
-    display: block;
+    display: flex;
     text-align: center;
-
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.projects h2{
-    border: 1px solid black;
+.projects h2 {
     border-bottom: 1px solid var(--primary-color);
     width: 75%;
     font-size: 40px;
     height: 20%;
-    display: inline-block;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .project-cards {
-    border: 1px solid black;
+    
     width: 100%;
     height: 80%;
     margin-top: 10px;
@@ -219,9 +221,15 @@ header nav ul li a {
 }
 
 .main-card {
-    border: 1px solid black;
-    width: 100%;
+    
+    max-width: 100%;
     height: 60%;
+    display: flex;
+}
+
+.main-card img {
+    padding: 12.5px;
+    width: 100%
 }
 
 .small-card-container {
@@ -236,7 +244,68 @@ header nav ul li a {
 .small-card-container img {
     padding: 5px;
     width: 50%;
-    display: flex;
+    /* display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; */
+}
+
+.contact-me {
+    width: 100%;
+    height: 350px;
+    margin: 0;
+    padding: 10px;
+    background-color: var(--quaternary-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    background-image: none;
+}
+
+.contact-me h2 {
+    border-bottom: 1px solid var(--primary-color);
+    width: 75%;
+    font-size: 40px;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-cards {
+    text-decoration: none;
+    max-width: 33%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-cards img {
+    width: 65%;
+    height: 65%;
+}
+
+.contact-me h4 {
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:visited {
+    text-decoration: none;
+    color: var(--primary-color);
 }
