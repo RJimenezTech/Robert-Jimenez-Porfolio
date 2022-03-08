@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 body {
@@ -34,7 +34,7 @@ header {
 header h1 {
     margin: 10px 0 0 0;
     width: 100%;
-    font-size: var(--heading-fonts);
+    font-size: 45px;
     color: var(--secondary-color);
     height: 50%;
 }
@@ -68,7 +68,6 @@ header nav ul li {
 header nav ul li a {
     text-decoration: none;
     font-weight: bold;
-    font-size: 3vw;
     color: var(--secondary-color);
     background-color: var(--primary-color);
     display: flex;
@@ -76,7 +75,6 @@ header nav ul li a {
     align-items: center;
     width: 100%;
     height: 100%;
-
 }
 
 header nav ul li a:hover {
@@ -84,11 +82,7 @@ header nav ul li a:hover {
     color: var(--primary-color);
 }
 
-/* #content {
-     
-}*/
-
-.hero, .about-me, .resume {
+.about-me, .resume {
     width: 100%;
     height: 450px;
     margin: 0;
@@ -98,36 +92,37 @@ header nav ul li a:hover {
 
 .hero {
     background-color: var(--quaternary-color);
+    border-bottom: var(--content-section-border);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background-image: none;
 }
 
 .hero-image {
     text-align: center;
-    height: 350px;
-    width: 350px;
+    margin: 25px;
+    width: 45%;
+    height: 100%;
 }
 
 .hero-image img {
-    border: 5px solid var(--primary-color);
-    height: 100%;
-    width: 100%;
+    border: 5px solid var(--quaternary-color);
+    outline: 5px solid var(--primary-color);
+    height: 75%;
+    width: 75%;
     border-radius: 50%;
 }
 
+.hero-text {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
 .hero h2{
     border: none;
-}
-
-.hero div {
-    margin: 0 25px 20px 0;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
 }
 
 .hero span {
@@ -322,11 +317,17 @@ header nav ul li a:hover {
 
 .contact-cards {
     text-decoration: none;
+    padding: 5px;
     max-width: 33%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+}
+
+.contact-cards:hover {
+    border: 5px solid var(--tertiary-color);
+    padding: 0;
 }
 
 .contact-cards img {
@@ -349,3 +350,79 @@ header nav ul li a:hover {
     text-decoration: none;
     color: var(--primary-color);
 }
+
+@media screen and (min-width: 1200px) {
+    header nav ul li a {
+        font-size: 32px;
+    }    
+    
+    header nav ul {
+        width: 1000px;
+    }
+
+    .hero-image {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header nav ul li a {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    header nav ul li a {
+        font-size: 25px; 
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 37px;
+    }
+
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    .hero {
+        justify-content: space-around;
+    }
+    .hero h2 {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    header h1 {
+        font-size: 32px;
+    }
+    header nav ul li a {
+        font-size: 18px; 
+    }
+
+    .hero {
+        justify-content: space-evenly;
+    }
+    .hero-image img {
+        border: 3px solid var(--quaternary-color);
+        outline: 3px solid var(--primary-color);
+    }
+    .hero h2 {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
