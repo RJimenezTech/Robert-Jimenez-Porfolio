@@ -82,7 +82,7 @@ header nav ul li a:hover {
     color: var(--primary-color);
 }
 
-.about-me, .resume {
+.resume {
     width: 100%;
     height: 450px;
     margin: 0;
@@ -131,6 +131,7 @@ header nav ul li a:hover {
 
 .about-me {
     background-color: var(--quaternary-color);
+    border-bottom: var(--content-section-border);
     color: var(--primary-color);
     display: flex;
     flex-wrap: wrap;
@@ -140,10 +141,9 @@ header nav ul li a:hover {
 
 .about-me h2{
     border-bottom: var(--heading-border);
-    padding: 40px;
+    padding: 25px;
     width: 60%;
-    font-size: 40px;
-    height: 20%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,7 +161,7 @@ header nav ul li a:hover {
 
 .about-me p {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
@@ -179,7 +179,7 @@ header nav ul li a:hover {
 .resume h2{
     border-bottom: var(--heading-border);
     width: 60%;
-    padding: 40px;
+    padding: 25px;
     font-size: 40px;
     height: 20%;
     display: flex;
@@ -360,14 +360,54 @@ header nav ul li a:hover {
         width: 1000px;
     }
 
+    .hero h2 {
+        font-size: 32px;
+    }
     .hero-image {
         width: 550px;
+    }
+
+    .about-me {
+        align-items: center;
+    }
+    .about-me h2 {
+        font-size: 37px;
+        flex: 1 1 35%;        
+        border-bottom: none;
+        border-right: 2px solid var(--tertiary-color);
+        height: 80%;
+        padding: 75px;
+    }
+    .about-me-text {
+        flex: 1 1 65%;
+        padding: 50px;
+    }
+
+    .about-me p {
+        font-size: 27px;
     }
 }
 
 @media screen and (max-width: 1200px) {
     header nav ul li a {
         font-size: 30px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+    .about-me h2 {
+        font-size: 36px;
+
+    }
+
+    .about-me p{
+        font-size: 25px;
+    }
+
+    .about-me-text {
+        
+        padding: 40px;
     }
 }
 
@@ -376,8 +416,16 @@ header nav ul li a:hover {
         font-size: 25px; 
     }
 
+    
     .hero h2 {
         font-size: 25px;
+    }
+
+    .about-me h2 {
+        font-size: 35px;
+    }   
+    .about-me p{
+        font-size: 22px;
     }
 }
 
@@ -386,27 +434,35 @@ header nav ul li a:hover {
         font-size: 37px;
     }
 
-
     header nav ul li a {
         font-size: 20px;
-    }
+    }  
 
     .hero {
         justify-content: space-around;
     }
     .hero h2 {
-        font-size: 17px;
+        font-size: 19px;
+    }
+    
+    .about-me h2 {
+        font-size: 32px;
+    }
+
+    .about-me p{
+        font-size: 22px;
     }
 }
 
 @media screen and (max-width: 575px) {
-    header h1 {
+    header h1  {
         font-size: 32px;
     }
+    
     header nav ul li a {
         font-size: 18px; 
     }
-
+ 
     .hero {
         justify-content: space-evenly;
     }
@@ -417,8 +473,14 @@ header nav ul li a:hover {
     .hero h2 {
         font-size: 15px;
     }
+    
+    .about-me h2{
+        font-size: 27px;
+    }
+    .about-me p{
+        font-size: 20px;
+    }
 }
-
 
 
 
