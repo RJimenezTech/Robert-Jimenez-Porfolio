@@ -1,3 +1,4 @@
+/*custom properties*/
 :root {
     --primary-color: #151D3B;
     --secondary-color: #D82148;
@@ -7,7 +8,7 @@
     --content-section-border: 4px solid var(--primary-color);
     --heading-border: 2px solid var(--tertiary-color);
 }
-
+/*universal and general stylings*/
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +21,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
+/*top header styling*/
 header {
     background-color: var(--primary-color);    
     padding: 0;
@@ -82,14 +84,7 @@ header nav ul li a:hover {
     color: var(--primary-color);
 }
 
-.resume {
-    width: 100%;
-    height: 450px;
-    margin: 0;
-    padding: 10px;
-    border-bottom: var(--content-section-border);
-}
-
+/*Banner section called 'hero'*/
 .hero {
     background-color: var(--quaternary-color);
     border-bottom: var(--content-section-border);
@@ -129,6 +124,7 @@ header nav ul li a:hover {
     color: var(--secondary-color);
 }
 
+/*About Me section*/
 .about-me {
     background-color: var(--quaternary-color);
     border-bottom: var(--content-section-border);
@@ -168,6 +164,7 @@ header nav ul li a:hover {
     padding: 5px;
 }
 
+/*Resume section*/
 .resume {
     background-color: var(--quaternary-color);
     border-bottom: var(--content-section-border);
@@ -194,6 +191,7 @@ header nav ul li a:hover {
     height: 80%;
     margin-top: 10px;
     margin-left: 15%;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -214,6 +212,7 @@ header nav ul li a:hover {
     font-size: 25px;
 }
 
+/*Projects section*/
 .projects {
     border-bottom: var(--content-section-border);
     background-color: var(--quaternary-color);
@@ -227,19 +226,17 @@ header nav ul li a:hover {
 
 .projects h2 {
     border-bottom: var(--heading-border);
-    padding: 30px;
+    padding: 25px;
     width: 60%;
-    height: 20%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .project-cards {
-    
     width: 100%;
     height: 80%;
-    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -247,33 +244,36 @@ header nav ul li a:hover {
 
 .main-card {
     margin: 12.5px;
-    border: 10px solid var(--tertiary-color);
+    border: 7px solid var(--tertiary-color);
     max-width: 75%;
-    max-height: 40%;
+    max-height: 35%;
     display: flex;
+    justify-content: center;
 }
-
 .main-card:hover {
     opacity: 0.5;
 }
-
 .main-card img {
-    width: 100%
+    width: 100%;
+    height: 100%;
 }
-
 .small-card-container {
-    /* margin: 10px; */
+    margin-bottom: 10px;
     max-width: 75%;
-    max-height: 60%;
+    max-height: 65%;
     display: flex;
     flex-wrap: wrap;
-    justify-content:flex-start;
+    justify-content: space-evenly;
+    
+    align-items:stretch;
+    gap: 10px;
+    
 }
 
 .small-card-container div {
-    max-width: 50%;
-    height: auto; 
-    border: 10px solid var(--tertiary-color);
+    width: 48%;
+    height: 50;
+    border: 7px solid var(--tertiary-color);
 }
 
 .small-card-container div:hover {
@@ -284,12 +284,11 @@ header nav ul li a:hover {
     height: 100%;
 }
 
+/*Contact Me section*/
 .contact-me {
     border-bottom: var(--content-section-border);
     width: 100%;
     height: auto;
-    margin: 0;
-    padding: 10px;
     background-color: var(--quaternary-color);
     color: var(--primary-color);
     display: flex;
@@ -300,31 +299,32 @@ header nav ul li a:hover {
 
 .contact-me h2 {
     border-bottom: var(--heading-border);
+    padding: 25px;
     width: 60%;
-    padding: 40px;
-    font-size: 40px;
-    /* height: 20%; */
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .contact-container {
-    width: 80%;
-    height: 80%;
+    width: 75%;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .contact-cards {
     text-decoration: none;
     padding: 5px;
     max-width: 33%;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-basis: 100%;
 }
 
@@ -339,7 +339,6 @@ header nav ul li a:hover {
 }
 
 .contact-me h4 {
-    font-size: 25px;
     width: 100%;
     text-align: center;
 }
@@ -371,9 +370,9 @@ header nav ul li a:hover {
     }
 
     .about-me, .resume {
-        align-items: center;
+        align-items: stretch;
     }
-    .about-me h2, .resume h2, .projects h2 {
+    .about-me h2, .resume h2, .projects h2, .contact-me h2 {
         font-size: 37px;
         flex: 1 1 35%;        
         border-bottom: none;
@@ -395,6 +394,7 @@ header nav ul li a:hover {
         flex: 1 1 65%;
         padding: 50px;
         margin-left: 0;
+        margin-top: 0;
     }
 
     .project-cards {
@@ -402,6 +402,12 @@ header nav ul li a:hover {
         padding: 50px;
     }
    
+    .contact-container {
+        flex: 1 1 65%;
+    }
+    .contact-me h4 {
+        font-size: 27px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -412,7 +418,7 @@ header nav ul li a:hover {
     .hero h2 {
         font-size: 30px;
     }
-    .about-me h2, .resume h2, .projects h2 {
+    .about-me h2, .resume h2, .projects h2, .contact-me h2 {
         font-size: 36px;
 
     }
@@ -424,6 +430,9 @@ header nav ul li a:hover {
     .about-me-text {
         
         padding: 40px;
+    }
+    .contact-me h4 {
+        font-size: 25px;
     }
 }
 
@@ -437,11 +446,14 @@ header nav ul li a:hover {
         font-size: 25px;
     }
 
-    .about-me h2, .resume h2, .projects h2 {
+    .about-me h2, .resume h2, .projects h2, .contact-me h2 {
         font-size: 35px;
     }   
     .about-me p, .resume-half ul{
         font-size: 22px;
+    }
+    .contact-me h4 {
+        font-size: 20px;
     }
 }
 
@@ -461,7 +473,7 @@ header nav ul li a:hover {
         font-size: 19px;
     }
     
-    .about-me h2, .resume h2, .projects h2 {
+    .about-me h2, .resume h2, .projects h2, .contact-me h2 {
         font-size: 32px;
     }
 
@@ -476,6 +488,10 @@ header nav ul li a:hover {
     }
     .resume-half ul {
         margin-left: 60px;
+    }
+
+    .contact-me h4 {
+        font-size: 17px;
     }
 }
 
@@ -499,11 +515,15 @@ header nav ul li a:hover {
         font-size: 15px;
     }
     
-    .about-me h2, .resume h2, .projects h2{
+    .about-me h2, .resume h2, .projects h2, .contact-me h2{
         font-size: 27px;
     }
     .about-me p, .resume-half ul{
         font-size: 20px;
+    }
+    
+    .contact-me h4 {
+        font-size: 12px;
     }
 }
 
