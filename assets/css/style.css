@@ -245,8 +245,8 @@ header nav ul li a:hover {
 .main-card {
     margin: 12.5px;
     border: 7px solid var(--primary-color);
-    max-width: 75%;
-    max-height: 35%;
+    width: 60%;
+    height: auto;
     display: flex;
     justify-content: center;
     position: relative;
